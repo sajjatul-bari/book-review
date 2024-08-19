@@ -8,10 +8,10 @@ const Banner = () => {
             className="max-w-sm rounded-lg "
           />
           <div className="space-y-10">
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-5xl font-bold leading-snug">
               Books to freshen up <br /> your bookshelf
             </h1>
-            <button className="btn btn-primary">View The List</button>
+            <button className="btn bg-[#23be0b] text-white">View The List</button>
           </div>
         </div>
       </div>
