@@ -9,8 +9,8 @@ const Books = () => {
       .then((data) => setBooks(data));
   }, []);
   return (
-    <div>
-      <h1>Books : {books.length}</h1>
+    <div className="py-14">
+      <h1 className="text-4xl font-extrabold text-center mb-5">Books</h1>
       <div className="grid grid-cols-3 gap-5">
         {books.map((book) => (
           <Book key={book.bookId} book={book}></Book>

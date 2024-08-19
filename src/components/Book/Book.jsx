@@ -11,7 +11,7 @@ const Book = ({ book }) => {
       <div className="card-body">
         <div className="card-actions justify-start">
           {tags.map((list, idx) => (
-            <div className="badge badge-outline" key={idx}>
+            <div className="badge text-[#23be0b] badge-outline" key={idx}>
               {list}
             </div>
           ))}
@@ -21,7 +21,7 @@ const Book = ({ book }) => {
         <div className="border border-dashed my-5"></div>
         <div className="flex  items-center">
           <p>{category}</p>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <p>{rating}</p>
             <FaRegStar></FaRegStar>
           </div>
