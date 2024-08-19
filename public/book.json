@@ -1,0 +1,80 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.postimg.cc/MHV4DGvN/pngwing-1.png",
+        "review": "A classic tale of love, wealth, and the American Dream.",
+        "totalPages": 180,
+        "rating": 4.3,
+        "category": "Classic Literature",
+        "tags": ["Classic", "Drama"],
+        "publisher": "Charles Scribner's Sons",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 2,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.postimg.cc/y60sn647/kindpng-7318921.png",
+        "review": "A profound and moving exploration of racial injustice in the Deep South.",
+        "totalPages": 281,
+        "rating": 4.8,
+        "category": "Historical Fiction",
+        "tags": ["Classic", "Social Issues"],
+        "publisher": "J.B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": 3,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://i.postimg.cc/MTV2s5L9/kindpng-5624060-1.png",
+        "review": "A chilling dystopian novel that explores totalitarianism and mass surveillance.",
+        "totalPages": 328,
+        "rating": 4.7,
+        "category": "Science Fiction",
+        "tags": ["Dystopian", "Political"],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": 4,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.postimg.cc/QxXGbpJq/kindpng-4945926-1.png",
+        "review": "A witty and romantic novel that explores manners and matrimonial machinations.",
+        "totalPages": 279,
+        "rating": 4.5,
+        "category": "Classic Romance",
+        "tags": ["Romance", "Classic"],
+        "publisher": "T. Egerton",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": 5,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.postimg.cc/DZVRbszL/kindpng-4022054-1.png",
+        "review": "An iconic coming-of-age novel that delves into the mind of a disillusioned teenager.",
+        "totalPages": 214,
+        "rating": 4.0,
+        "category": "Young Adult",
+        "tags": ["Coming-of-Age", "Classic"],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.postimg.cc/KjxV02BY/kindpng-2592315-1.png",
+        "review": "A captivating fantasy adventure that introduces the world of Middle-earth.",
+        "totalPages": 310,
+        "rating": 4.7,
+        "category": "Fantasy",
+        "tags": ["Adventure", "Fantasy"],
+        "publisher": "George Allen & Unwin",
+        "yearOfPublishing": 1937
+    }
+]
