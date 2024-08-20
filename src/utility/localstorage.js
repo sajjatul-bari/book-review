@@ -14,4 +14,28 @@ const saveStoredBook = (id) => {
     localStorage.setItem("books-read", JSON.stringify(storedBooks));
   }
 };
-export { saveStoredBook, getStoredBook };
+
+//wishlist books
+
+const getStoredWishlistBook = () => {
+  const storedWishlistBook = localStorage.getItem("wishlist-books");
+  if (storedWishlistBook) {
+    return JSON.parse(storedWishlistBook);
+  }
+  return [];
+};
+
+const saveStoredWishlistBook = (id) => {
+  const storedWishlistBooks = getStoredWishlistBook();
+  const exists = storedWishlistBooks.find((jobId) => jobId === id);
+  if (!exists) {
+    storedWishlistBooks.push(id);
+    localStorage.setItem("wishlist-books", JSON.stringify(storedWishlistBooks));
+  }
+};
+export {
+  saveStoredBook,
+  getStoredBook,
+  getStoredWishlistBook,
+  saveStoredWishlistBook,
+};

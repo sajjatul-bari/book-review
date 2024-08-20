@@ -3,21 +3,22 @@ import { CiLocationOn } from "react-icons/ci";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { FaRegFile } from "react-icons/fa";
 import { Link } from "react-router-dom";
-const ReadBooks = ({ book }) => {
-  const {
-    bookId,
-    bookName,
-    author,
-    image,
-    category,
-    rating,
-    totalPages,
-    publisher,
-    tags,
-    yearOfPublishing,
-  } = book;
-  return (
-    <div className="border mb-5 p-5 rounded-xl ">
+
+const WishlistBoks = ({book}) => {
+    const {
+        bookId,
+        bookName,
+        author,
+        image,
+        category,
+        rating,
+        totalPages,
+        publisher,
+        tags,
+        yearOfPublishing,
+      } = book;
+    return (
+        <div className="border mb-5 p-5 rounded-xl ">
       <div className="flex lg:flex-row gap-10">
         <div className="border p-5 rounded-xl bg-base-200">
           <img src={image} className=" h-40 rounded-lg" />
@@ -68,9 +69,9 @@ const ReadBooks = ({ book }) => {
         </div>
       </div>
     </div>
-  );
+    );
 };
-ReadBooks.propTypes = {
-  book: PropTypes.object.isRequired,
-};
-export default ReadBooks;
+WishlistBoks.propTypes = {
+    book: PropTypes.object.isRequired,
+  };
+export default WishlistBoks;
