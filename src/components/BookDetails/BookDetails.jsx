@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveStoredBook } from "../../utility/localstorage";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -17,6 +18,11 @@ const BookDetails = () => {
     totalPages,
     review,
   } = book;
+
+  const handleReadBook = () => {
+    saveStoredBook(idInt);
+  };
+  
 
   return (
     <div className="flex justify-between min-w-full pt-10 pb-16 gap-10 ">
@@ -67,7 +73,7 @@ const BookDetails = () => {
           </table>
         </div>
         <div className="space-x-3">
-          <a className="btn text-black bg-white">Read</a>
+          <a onClick={handleReadBook} className="btn text-black bg-white">Read</a>
           <a className="btn text-white bg-[#59c6d2]">Wishlist</a>
         </div>
       </div>
