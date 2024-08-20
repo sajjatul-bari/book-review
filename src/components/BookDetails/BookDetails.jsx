@@ -19,7 +19,7 @@ const BookDetails = () => {
   } = book;
 
   return (
-    <div className="flex justify-between min-w-full py-10 gap-10 ">
+    <div className="flex justify-between min-w-full pt-10 pb-16 gap-10 ">
       <div className="w-1/2 bg-[#f3f3f3] border py-10 rounded-xl">
         <img className="mx-auto" src={image} alt="" />
       </div>

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 const PageRead = () => {
@@ -28,7 +29,8 @@ const PageRead = () => {
   };
 
   return (
-    <BarChart className="mb-10 border bg-[#f8f8f8] mx-auto p-6 rounded-xl "
+    <BarChart
+      className="mb-10 border bg-[#f8f8f8] mx-auto p-6 rounded-xl "
       width={1150}
       height={500}
       data={data}
@@ -56,4 +58,11 @@ const PageRead = () => {
   );
 };
 
+PageRead.propTypes = {
+  fill: PropTypes.string.isRequired,
+  x: PropTypes.number.isRequired,
+  y: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+};
 export default PageRead;
