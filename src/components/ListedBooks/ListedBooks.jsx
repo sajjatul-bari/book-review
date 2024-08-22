@@ -35,6 +35,7 @@ const ListedBooks = () => {
     <div>
       <div role="tablist" className="tabs tabs-lifted">
         <input
+        id="read"
           type="radio"
           name="my_tabs_2"
           role="tab"
@@ -55,6 +56,7 @@ const ListedBooks = () => {
 
         <input
           type="radio"
+          id="wish"
           name="my_tabs_2"
           role="tab"
           className="tab"

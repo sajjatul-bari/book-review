@@ -1,5 +1,12 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveStoredBook, saveStoredWishlistBook } from "../../utility/localstorage";
+import {
+  getStoredBook,
+  getStoredWishlistBook,
+  saveStoredBook,
+  saveStoredWishlistBook,
+} from "../../utility/localstorage";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -20,12 +27,27 @@ const BookDetails = () => {
   } = book;
 
   const handleReadBook = () => {
+    const isBookInList = getStoredBook().includes(idInt);
+    if (isBookInList) {
+      toast.error("Book is already added to Book Lists");
+    } else {
+      toast.success("Book added to Book Lists");
+    }
     saveStoredBook(idInt);
   };
+
   const handleWishlistBook = () => {
+    const isBookInList = getStoredBook().includes(idInt);
+    const isBookInWishList = getStoredWishlistBook().includes(idInt);
+    if (isBookInList) {
+      toast.error("You already read this book");
+    } else if (isBookInWishList) {
+      toast.error("You already addad to Wish List");
+    } else {
+      toast.success("Book added to Wish Lists");
+    }
     saveStoredWishlistBook(idInt);
   };
-  
 
   return (
     <div className="flex justify-between min-w-full pt-10 pb-16 gap-10 ">
@@ -76,10 +98,19 @@ const BookDetails = () => {
           </table>
         </div>
         <div className="space-x-3">
-          <a href="/listed" onClick={handleReadBook} className="btn text-black bg-white">Read</a>
-          <a href="/listed" onClick={handleWishlistBook} className="btn text-white bg-[#59c6d2]">Wishlist</a>
+          <a onClick={handleReadBook} className="btn text-black bg-white">
+            Read
+          </a>
+
+          <a
+            onClick={handleWishlistBook}
+            className="btn text-white bg-[#59c6d2]"
+          >
+            Wishlist
+          </a>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
