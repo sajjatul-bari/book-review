@@ -21,7 +21,7 @@ const WishlistBoks = ({book}) => {
         <div className="border mb-5 p-5 rounded-xl ">
       <div className="flex lg:flex-row gap-10">
         <div className="border p-5 rounded-xl bg-base-200">
-          <img src={image} className=" h-40 rounded-lg" />
+          <img src={image} className=" h-40 w-36 rounded-lg" />
         </div>
         <div className="space-y-3 w-full">
           <h1 className="text-3xl font-bold">{bookName}</h1>

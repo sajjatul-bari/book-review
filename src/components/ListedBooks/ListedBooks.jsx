@@ -1,7 +1,10 @@
 import ReadBooks from "../ReadBooks/ReadBooks";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredBook, getStoredWishlistBook } from "../../utility/localstorage";
+import {
+  getStoredBook,
+  getStoredWishlistBook,
+} from "../../utility/localstorage";
 import WishlistBoks from "../WishlistBooks/WishlistBoks";
 
 const ListedBooks = () => {
@@ -12,17 +15,20 @@ const ListedBooks = () => {
   useEffect(() => {
     const storedBooksId = getStoredBook();
     const storedWishlistBooksId = getStoredWishlistBook();
+
     if (books && books.length > 0) {
       const booksRead = books.filter((book) =>
         storedBooksId.includes(book.bookId)
       );
-      setReadBooks(booksRead);  
+      setReadBooks(booksRead);
     }
     if (books && books.length > 0) {
-      const booksWishlist = books.filter((book) =>
-        storedWishlistBooksId.includes(book.bookId)
+      const booksWishlist = books.filter(
+        (book) =>
+          storedWishlistBooksId.includes(book.bookId) &&
+          !storedBooksId.includes(book.bookId)
       );
-      setwishlistBooks(booksWishlist)
+      setwishlistBooks(booksWishlist);
     }
   }, [books]);
   return (

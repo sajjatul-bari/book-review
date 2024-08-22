@@ -76,8 +76,8 @@ const BookDetails = () => {
           </table>
         </div>
         <div className="space-x-3">
-          <a onClick={handleReadBook} className="btn text-black bg-white">Read</a>
-          <a onClick={handleWishlistBook} className="btn text-white bg-[#59c6d2]">Wishlist</a>
+          <a href="/listed" onClick={handleReadBook} className="btn text-black bg-white">Read</a>
+          <a href="/listed" onClick={handleWishlistBook} className="btn text-white bg-[#59c6d2]">Wishlist</a>
         </div>
       </div>
     </div>
