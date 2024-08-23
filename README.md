@@ -1,6 +1,6 @@
 Live Site URL
 
-Visit the live site here: [http://127.0.0.1:5173/](http://127.0.0.1:5173/)
+Visit the live site here: https://book-review-me.netlify.app
 
 Features and Characteristics
 
