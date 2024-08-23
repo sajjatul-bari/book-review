@@ -5,13 +5,32 @@ const Header = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink 
+          to="/" 
+          exact 
+          activeClassName="nav-link-active" 
+          className="nav-link"
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/listed">Listed Books</NavLink>
+        <NavLink 
+          to="/listed" 
+          activeClassName="nav-link-active" 
+          className="nav-link"
+        >
+          Listed Books
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/pages-read">Pages to Read</NavLink>
+        <NavLink 
+          to="/pages-read" 
+          activeClassName="nav-link-active" 
+          className="nav-link"
+        >
+          Pages to Read
+        </NavLink>
       </li>
     </>
   );
@@ -43,7 +62,7 @@ const Header = () => {
           </ul>
         </div>
         <Link to="/">
-        <a className="btn btn-ghost text-xl">Book Review</a>
+        <a className="btn btn-ghost text-2xl font-extrabold text-[#23be0b]">Book Review</a>
         </Link>
         
       </div>
