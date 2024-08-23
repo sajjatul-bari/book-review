@@ -50,10 +50,10 @@ const ListedBooks = () => {
   return (
     <div>
       <div className="p-10 text-center bg-[#f2f2f2] rounded-xl mb-10">
-        <h1 className="text-4xl font-extrabold">Book</h1>
+        <h1 className="lg:text-5xl text-3xl font-extrabold">Book</h1>
       </div>
 
-      <div className="flex justify-center mb-5">
+      <div className="flex justify-center mb-10">
         <select
           onChange={(e) => handleSortReadBooks(e.target.value)}
           className="btn bg-[#23be0b] text-white px-2 items-center"

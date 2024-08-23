@@ -18,17 +18,17 @@ const ReadBooks = ({ book }) => {
   } = book;
   return (
     <div className="border mb-5 p-5 rounded-xl ">
-      <div className="flex lg:flex-row gap-10">
+      <div className="flex lg:flex-row flex-col gap-10">
         <div className="border p-5 rounded-xl bg-base-200">
-          <img src={image} className=" h-40 w-36 rounded-lg" />
+          <img src={image} className=" h-40 w-36 mx-auto rounded-lg" />
         </div>
         <div className="space-y-3 w-full">
           <h1 className="text-3xl font-bold">{bookName}</h1>
           <p>
             <span className="text-black font-semibold ">By: </span> {author}
           </p>
-          <div className="flex items-center gap-10">
-            <p className="flex gap-2 text-[#23be0b] items-center">
+          <div className="flex lg:flex-row flex-col lg:items-center lg:gap-10 gap-3">
+            <p className="flex gap-3 text-[#23be0b] items-center">
               <span className="text-black font-semibold ">Tag :</span>
               {tags.map((tag, idx) => (
                 <p key={idx} className="badge badge-outline">
@@ -41,7 +41,7 @@ const ReadBooks = ({ book }) => {
               <p>Year of Publication : {yearOfPublishing}</p>
             </div>
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex lg:flex-row flex-col lg:items-center lg:gap-5 gap-3">
             <div className="flex gap-2 items-center">
               <HiOutlineUsers className="text-xl"></HiOutlineUsers>
               <p>Publisher : {publisher}</p>
@@ -52,7 +52,7 @@ const ReadBooks = ({ book }) => {
             </div>
           </div>
           <hr className="border border-slate-300" />
-          <div className="flex items-center gap-3">
+          <div className="flex lg:flex-row flex-col lg:items-center gap-3">
             <p className="py-2 px-7 bg-[#e0eeff] text-[#0073ff] rounded-full">
               Category : {category}
             </p>

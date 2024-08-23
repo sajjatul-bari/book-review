@@ -5,28 +5,28 @@ const Header = () => {
   const links = (
     <>
       <li>
-        <NavLink 
-          to="/" 
-          exact 
-          activeClassName="nav-link-active" 
+        <NavLink
+          to="/"
+          exact
+          activeClassName="nav-link-active"
           className="nav-link"
         >
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink 
-          to="/listed" 
-          activeClassName="nav-link-active" 
+        <NavLink
+          to="/listed"
+          activeClassName="nav-link-active"
           className="nav-link"
         >
           Listed Books
         </NavLink>
       </li>
       <li>
-        <NavLink 
-          to="/pages-read" 
-          activeClassName="nav-link-active" 
+        <NavLink
+          to="/pages-read"
+          activeClassName="nav-link-active"
           className="nav-link"
         >
           Pages to Read
@@ -62,14 +62,15 @@ const Header = () => {
           </ul>
         </div>
         <Link to="/">
-        <a className="btn btn-ghost text-2xl font-extrabold text-[#23be0b]">Book Review</a>
+          <a className="btn btn-ghost text-2xl font-extrabold text-[#23be0b]">
+            Book Review
+          </a>
         </Link>
-        
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end space-x-3">
+      <div className="navbar-end space-x-3  lg:flex">
         <a className="btn text-white bg-[#23be0b]">Sign In</a>
         <a className="btn text-white bg-[#59c6d2]">Sign Up</a>
       </div>

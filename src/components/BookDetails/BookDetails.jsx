@@ -50,12 +50,12 @@ const BookDetails = () => {
   };
 
   return (
-    <div className="flex justify-between min-w-full pt-10 pb-16 gap-10 ">
-      <div className="w-1/2 bg-[#f3f3f3] border py-10 rounded-xl">
-        <img className="mx-auto" src={image} alt="" />
+    <div className="lg:flex justify-between min-w-full pt-10 pb-16 gap-10 ">
+      <div className="lg:w-1/2 w-full bg-[#f3f3f3] border py-10 rounded-xl mb-5">
+        <img className="mx-auto " src={image} alt="" />
       </div>
-      <div className="w-1/2 space-y-5">
-        <h1 className="text-5xl font-bold">{bookName}</h1>
+      <div className="lg:w-1/2 w-full space-y-5">
+        <h1 className="lg:text-5xl text-3xl font-bold">{bookName}</h1>
         <h3 className="text-lg font-medium">By : {author}</h3>
         <hr className="border border-slate-500" />
         <h3 className="text-lg font-medium">{category}</h3>

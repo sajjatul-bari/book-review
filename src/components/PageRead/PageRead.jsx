@@ -1,14 +1,38 @@
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Legend,
+} from "recharts";
+import { getStoredBook } from "../../utility/localstorage";
+
 const PageRead = () => {
   const books = useLoaderData();
+  const [readBooks, setReadBooks] = useState([]);
+
+  useEffect(() => {
+    const storedBooksId = getStoredBook();
+
+    if (books && books.length > 0) {
+      const booksRead = books.filter((book) =>
+        storedBooksId.includes(book.bookId)
+      );
+      setReadBooks(booksRead);
+    }
+  }, [books]);
 
   const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
-  const data = books.map((book) => ({
+  const data = readBooks.map((book) => ({
     name: book.bookName,
-    uv: book.totalPages,
+    pages: book.totalPages,
   }));
 
   const getPath = (x, y, width, height) => {
@@ -29,32 +53,33 @@ const PageRead = () => {
   };
 
   return (
-    <BarChart
-      className="mb-10 border bg-[#f8f8f8] mx-auto p-6 rounded-xl "
-      width={1150}
-      height={500}
-      data={data}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Bar
-        dataKey="uv"
-        fill="#8884d8"
-        shape={<TriangleBar />}
-        label={{ position: "top" }}
+    <ResponsiveContainer width="100%" height={500} className=" pb-10 pt-5">
+      <BarChart
+        className="mb-10 border bg-[#f8f8f8] mx-auto rounded-xl py-2   "
+        data={data}
+        margin={{
+          top: 20,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}
       >
-        {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-        ))}
-      </Bar>
-    </BarChart>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Bar
+          dataKey="pages"
+          fill="#8884d8"
+          shape={<TriangleBar />}
+          label={{ position: "top" }}
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+          ))}
+        </Bar>
+        <Legend></Legend>
+      </BarChart>
+    </ResponsiveContainer>
   );
 };
 
