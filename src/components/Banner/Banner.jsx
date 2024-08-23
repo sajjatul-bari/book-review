@@ -6,7 +6,7 @@ const Banner = () => {
       <div className="hero bg-base-200 rounded-xl py-10">
         <div className="hero-content flex-col-reverse lg:flex-row-reverse lg:gap-60 gap-20">
           <img
-            src="/public/images/pngwing 1.png"
+            src="images/pngwing 1.png"
             className="max-w-sm rounded-lg "
           />
           <div className="space-y-10 ">
